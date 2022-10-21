@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asistenciaplusemailnewprivatechat 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asistenciaplusemailnewprivatechat
+  template:
+    metadata:
+      labels:
+        app: asistenciaplusemailnewprivatechat 
+    spec:
+      containers:
+        - name: asistenciaplusemailnewprivatechat 
+          image: registrodecotenedores.azurecr.io/asistenciaplusemailnewprivatechat
+          ports:
+          - containerPort: 12345
