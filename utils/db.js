@@ -15,8 +15,8 @@ class Db {
 		this.connection = mysql.createPool({
 			connectionLimit: 100,
 			host: 'localhost',
-			user: 'root',
-			password: '',
+			user: 'sqlroot',
+			password: 'root',
 			database: 'chat',
 			debug: false
 		});
